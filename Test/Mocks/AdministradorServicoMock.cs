@@ -1,6 +1,13 @@
+#nullable enable
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using MinimalApi.Dominio.Entidades;
 using MinimalApi.Dominio.Interfaces;
 using MinimalApi.DTOs;
+
+
+
 
 namespace Test.Mocks;
 

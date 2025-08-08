@@ -1,39 +1,50 @@
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.Extensions.DependencyInjection;
 using MinimalApi.Dominio.Interfaces;
 using Test.Mocks;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Net.Http;
+using Microsoft.VisualStudio.TestPlatform.TestHost;
+using Microsoft.AspNetCore.Hosting;
 
-namespace Test.Helpers;
-
-public class Setup
+namespace Test.Helpers
 {
-    public const string PORT = "5001";
-    public static TestContext testContext = default!;
-    public static WebApplicationFactory<Startup> http = default!;
-    public static HttpClient client = default!;
-
-    public static void ClassInit(TestContext testContext)
+    [TestClass]
+    public class Setup
     {
-        Setup.testContext = testContext;
-        Setup.http = new WebApplicationFactory<Startup>();
+        public const string PORT = "5001";
+        public static WebApplicationFactory<Program> Factory { get; private set; } = default!;
+        public static HttpClient Client { get; private set; } = default!;
 
-        Setup.http = Setup.http.WithWebHostBuilder(builder =>
+        // MSTest injeta o TestContext como parâmetro, não precisa ser propriedade estática
+        [AssemblyInitialize]
+        public static void AssemblyInit(TestContext testContext)
         {
-            builder.UseSetting("https_port", Setup.PORT).UseEnvironment("Testing");
-            
-            builder.ConfigureServices(services =>
+            Factory = new WebApplicationFactory<Program>()
+                .WithWebHostBuilder(builder =>
+                {
+                    builder.UseSetting("https_port", PORT)
+                           .UseEnvironment("Testing");
+
+                    builder.ConfigureServices(services =>
+                    {
+                        // Substitui serviço real por mock nos testes
+                        services.AddScoped<IAdministradorServico, AdministradorServicoMock>();
+                    });
+                });
+
+            Client = Factory.CreateClient(new WebApplicationFactoryClientOptions
             {
-                services.AddScoped<IAdministradorServico, AdministradorServicoMock>();
+                BaseAddress = new Uri($"https://localhost:{PORT}")
             });
+        }
 
-        });
-
-        Setup.client = Setup.http.CreateClient();
-    }
-
-    public static void ClassCleanup()
-    {
-        Setup.http.Dispose();
+        [AssemblyCleanup]
+        public static void AssemblyCleanup()
+        {
+            Client?.Dispose();
+            Factory?.Dispose();
+        }
     }
 }
