@@ -1,11 +1,13 @@
 # 🚀 Minimal API com .NET 8
 
-Este projeto demonstra uma API minimalista desenvolvida em **.NET 8**, usando boas práticas, autenticação JWT, testes automatizados com `xUnit` e documentação Swagger.
+A API segue os princípios dos verbos HTTP para criar uma aplicação de cadastro de veículos com administradores:
+Este projeto demonstra uma API minimalista desenvolvida em **.NET 8**, usando boas práticas, autenticação JWT, testes automatizados  e documentação Swagger.
+
 
 ---
 
 ## 📡 Endpoints e Verbos HTTP
-A API segue os princípios REST e usa os verbos HTTP principais para operar recursos:
+A API segue os princípios dos verbos HTTP:
 
 - **GET**: Recupera dados do servidor. Exemplo: listar administradores, obter detalhes de um recurso.
 - **POST**: Cria um novo recurso no servidor. Exemplo: criar um novo administrador.
