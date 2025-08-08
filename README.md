@@ -37,17 +37,17 @@ curl -X DELETE http://localhost:5004/administradores/1
 
 ### 🔐 Teste Unidade
 
-![Unidade](minimal-api\imagens\TesteUnidade.png)
+![Unidade](https://github.com/JefersonManso/minimal-api/blob/main/imagens/TesteUnidade.png)
 
 ### 📑 Teste de persistência
 
-![Persistência](minimal-api\imagens\TestePersistencia.png)
+![Persistência](https://github.com/JefersonManso/minimal-api/blob/main/imagens/TestePersistencia.png)
 
 ### ✅ Teste de request
 
-![Request](minimal-api\imagens\TesteRequest.png)
+![Request](https://github.com/JefersonManso/minimal-api/blob/main/imagens/TesteRequest.png)
 
-![Swagger](minimal-api\imagens\swagger.png)
+![Swagger](https://github.com/JefersonManso/minimal-api/blob/main/imagens/swagger.png)
 
 ---
 
