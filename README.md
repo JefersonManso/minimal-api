@@ -55,7 +55,7 @@ curl -X DELETE http://localhost:5004/administradores/1
 ![Request](https://github.com/JefersonManso/minimal-api/blob/main/imagens/TesteRequest.png)
 
 
-
+### ✅ Teste de Swagger
 ![Swagger](https://github.com/JefersonManso/minimal-api/blob/main/imagens/swagger.png)
 
 ---
