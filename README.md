@@ -31,21 +31,23 @@ curl -X DELETE http://localhost:5004/administradores/1
 
 
 ---
+
+
 ## 📸 Visão Geral
 
 ### 🔐 Teste Unidade
 
-![Unidade](imagens/TesteUnidade.png)
+![Unidade](minimal-api\imagens\TesteUnidade.png)
 
 ### 📑 Teste de persistência
 
-![Persistência](imagens/TestePersistencia.png)
+![Persistência](minimal-api\imagens\TestePersistencia.png)
 
 ### ✅ Teste de request
 
-![Request](imagens/TesteRequest.png)
+![Request](minimal-api\imagens\TesteRequest.png)
 
-![Swagger](imagens/swagger.png)
+![Swagger](minimal-api\imagens\swagger.png)
 
 ---
 
