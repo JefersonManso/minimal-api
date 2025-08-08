@@ -12,7 +12,7 @@ A API segue os princípios REST e usa os verbos HTTP principais para operar recu
 - **PUT**: Atualiza um recurso existente. Exemplo: alterar dados do administrador.
 - **DELETE**: Remove um recurso. Exemplo: excluir um administrador.
 
----
+```bash
 # GET - listar administradores
 curl -X GET http://localhost:5004/administradores
 
@@ -35,17 +35,17 @@ curl -X DELETE http://localhost:5004/administradores/1
 
 ### 🔐 Teste Unidade
 
-![Unidade](minimal-api\estrutura_projeto.png\TesteUnidade.png)
+![Unidade](imagens/TesteUnidade.png)
 
 ### 📑 Teste de persistência
 
-![Persistência](minimal-api\estrutura_projeto.png\TestePersistencia.png)
+![Persistência](imagens/TestePersistencia.png)
 
 ### ✅ Teste de request
 
-![Request](minimal-api\estrutura_projeto.png\TesteRequest.png)
+![Request](imagens/TesteRequest.png)
 
-![Swagger](minimal-api\estrutura_projeto.png\swagger.png)
+![Swagger](imagens/swagger.png)
 
 ---
 
