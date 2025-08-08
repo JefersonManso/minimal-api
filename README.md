@@ -35,17 +35,17 @@ curl -X DELETE http://localhost:5004/administradores/1
 
 ### 🔐 Teste Unidade
 
-![Unidade](minimal-api/imagens/TesteUnidade.png)
+![Unidade](imagens/TesteUnidade.png)
 
 ### 📑 Teste de persistência
 
-![Persistência](minimal-api/imagens/TestePersistencia.png)
+![Persistência](imagens/TestePersistencia.png)
 
 ### ✅ Teste de request
 
-![Request](minimal-api/imagens/TesteRequest.png)
+![Request](imagens/TesteRequest.png)
 
-![Swagger](minimal-api/imagens/swagger.png)
+![Swagger](imagens/swagger.png)
 
 ---
 
@@ -95,6 +95,8 @@ minimal-api/
 ### 1. Clone o repositório
 
 ```
-git clone https://github.com/seu-usuario/minimal-api.gitcd minimal-api
+git clone https://github.com/seu-usuario/minimal-api.git
+cd minimal-api
+
 
 ```
