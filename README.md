@@ -12,7 +12,7 @@ A API segue os princípios REST e usa os verbos HTTP principais para operar recu
 - **PUT**: Atualiza um recurso existente. Exemplo: alterar dados do administrador.
 - **DELETE**: Remove um recurso. Exemplo: excluir um administrador.
 
-```bash
+---
 # GET - listar administradores
 curl -X GET http://localhost:5004/administradores
 
@@ -35,17 +35,17 @@ curl -X DELETE http://localhost:5004/administradores/1
 
 ### 🔐 Teste Unidade
 
-![Unidade](estrutura_projeto.png/TesteUnidade.png)
+![Unidade](minimal-api\estrutura_projeto.png\TesteUnidade.png)
 
 ### 📑 Teste de persistência
 
-![Persistência](estrutura_projeto.png/TestePersistencia.png)
+![Persistência](minimal-api\estrutura_projeto.png\TestePersistencia.png)
 
 ### ✅ Teste de request
 
-![Request](estrutura_projeto.png/TesteRequest.png)
+![Request](minimal-api\estrutura_projeto.png\TesteRequest.png)
 
-![Request](estrutura_projeto.png/swagger.png)
+![Swagger](minimal-api\estrutura_projeto.png\swagger.png)
 
 ---
 
@@ -68,7 +68,7 @@ minimal-api/
 │
 ├── minimal-api.sln # Solution principal
 └── README.md # Este arquivo
-
+```
 
 ---
 
@@ -95,6 +95,6 @@ minimal-api/
 ### 1. Clone o repositório
 
 ```
-git clone https://github.com/seu-usuario/minimal-api.git
-cd minimal-api
+git clone https://github.com/seu-usuario/minimal-api.gitcd minimal-api
+
 ```
