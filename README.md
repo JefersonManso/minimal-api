@@ -12,21 +12,26 @@ A API segue os princípios REST e usa os verbos HTTP principais para operar recu
 - **PUT**: Atualiza um recurso existente. Exemplo: alterar dados do administrador.
 - **DELETE**: Remove um recurso. Exemplo: excluir um administrador.
 
-```bash
-# GET - listar administradores
+---
+
+### GET - listar administradores
 curl -X GET http://localhost:5004/administradores
 
-# POST - criar administrador
+---
+
+#### POST - criar administrador
 curl -X POST http://localhost:5004/administradores \
   -H "Content-Type: application/json" \
   -d '{"email":"novo@teste.com","senha":"123456","perfil":"Administrador"}'
 
-# PUT - atualizar administrador
+---
+
+#### PUT - atualizar administrador
 curl -X PUT http://localhost:5004/administradores/1 \
   -H "Content-Type: application/json" \
   -d '{"senha":"novaSenha"}'
 
-# DELETE - deletar administrador
+#### DELETE - deletar administrador
 curl -X DELETE http://localhost:5004/administradores/1
 
 
